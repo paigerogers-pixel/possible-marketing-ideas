@@ -1,0 +1,309 @@
+What the brand
+already has right
+The brand strategy built to date is genuinely strong. The SEVERE framework, the Cult Document, the Palantir-aligned positioning — most fintech companies never get this close to a coherent identity. The core line is real:
+"We are not building an investing app.
+We are building better investors."
+intelligentinvesting.ai
+The enemy is correctly defined. The identity offer is clear. The visual system is distinctive. The problem is not the brand.
+The problem is there is no funnel. We have doctrine without distribution — a philosophy without a mechanism for the right people to find it. That is what this strategy fixes.
+The competitive context
+The brand's primary competitor — and the place the ICP comes from — is Wealthsimple. Canada's dominant retail investing platform: 3M+ users, $100B+ in assets, optimised for activity, engagement, and speculation. Options, crypto, prediction markets. Built for traders.
+II's positioning is not against Wealthsimple. It is the natural next step after it. The ICP has already been there. They've already traded, speculated, and underperformed. They know it doesn't work. They are looking to graduate. Intelligent Investing is where serious investors go when they are done with that.
+The luxury brand model: Hermès does not compete with Zara. It positions above the market entirely. When it becomes the aspiration, every other brand becomes the baseline. II's positioning is structurally identical — the premium, institutional-grade choice for Canadian investors who have outgrown the mass-market platforms. The $20/month CAD subscription is not a barrier. It is a filter. Every competing platform is free. Ours is not. That alone repels the wrong customer and attracts the right one.
+The one tension to resolve
+Strategic Conflict
+The SEVERE Marketing Strategy (February) states 1 post per week maximum, never more than 1 post in 7 days. The KARP Strategy (current) states 1 post per day.
+These are not compatible. Daily posting will make this account look like every other finance account within 30 days. The SEVERE document has the better argument. The resolution: batch content production bi-weekly, publish selectively. Content is produced in concentrated sessions every two weeks — not daily. This creates a full queue without daily effort from the marketing function, while the publishing cadence remains controlled and intentional.
+The governing principle: "If marketing does not increase desirability, we do not do it. We are not indifferent to uptake. We are indifferent to uptake that does not compound."
+
+// 02
+Who this is
+actually for
+The ICP definition below is grounded in Canadian market data, not assumptions. It identifies three segments of the same person at three different points in the same journey. II's job is to exist at every point — so whenever someone is ready to move, we are the obvious next step.
+The market reality
+Data point | What it means for II | Source
+8M+ Canadians hold self-directed investment accounts — up 40%+ since 2019 | The market is real, large, and growing. This is not a niche. | CSA Investor Index 2024
+45% of Canadian investors have a self-directed account. 30% opened it in the last 2 years. | A large wave of newer self-directed investors with no established framework — exactly the confused improver segment. | CSA Investor Index 2024
+38% of DIY investors trade regularly — 10 to 150 trades per quarter | Over 3M Canadians are actively speculating. This is the speculator segment — the largest conversion opportunity. | Wealthsimple 2025 Trading Recap
+89% of Canadian active stock funds underperformed the S&P/TSX in 2024. Over 10 years: 95.5% underperformed. | The approach most self-directed investors are using does not work. They either do not know this yet, or they do and have not found the alternative. | SPIVA Canada 2024
+Average retail investor returned 2.6%/year over 20 years vs. 7.8% for the S&P 500 | The performance gap is felt, even when not articulated. This is the emotional entry point for II's content. | DALBAR / OSC research
+53% of investors now use social media for investment decisions — up 18% since 2020 | A large and growing segment is making decisions without a framework, driven by noise. High susceptibility to II's counter-positioning. | CSA Investor Index 2024
+OSC study: many self-directed investors overestimate their knowledge — confident but underperforming | The pain point exists even when it is not named. Content that names it creates immediate recognition. | OSC Self-Directed Investor Study
+Wealthsimple added futures, options, prediction markets, 24/5 trading in 2025–2026 | Canada's largest platform is moving harder into speculation. The gap for disciplined investing is widening — intentionally. | Wealthsimple Product Updates 2025–2026
+
+The addressable market: Of 8M+ self-directed accounts, the combined speculator + confused improver + aspiring disciplined segments represent approximately 3–3.5M Canadians who are either actively underperforming or already questioning their approach. Phase 1 target of 250 new subscribers/month requires reaching 0.008% of this market. The opportunity is not the constraint — finding and converting the right people is.
+
+The three ICP segments
+These are not three different people. They are the same person at different stages of the same journey. Content, channels, and messaging must serve all three simultaneously.
+
+Segment 01 — ~1.2M Canadians
+The Active Speculator
+Currently trading frequently on Wealthsimple or similar. Options, momentum plays, reacting to news and social media. Underperforming but has not fully admitted it. Experiencing intermittent doubt — a bad quarter, a position they cannot explain, a year-end return that does not add up. Not yet ready to change, but susceptible to content that names exactly what they are doing.
+
+Segment 02 — ~1.5–2M Canadians
+The Confused Improver
+Has been self-directing for 2–5 years. Owns a mix of ETFs and individual stocks, some of which they cannot fully explain. Has decent financial literacy but no consistent framework. Knows something is off — performance is uneven, decisions feel reactive, good years feel like luck. Actively looking for a better approach. This is the primary conversion segment.
+
+Segment 03 — ~400–600K Canadians
+The Aspiring Disciplined Investor
+Has already made the philosophical shift. Reads Buffett, Munger, Graham. Knows speculation does not work. Looking for a platform that matches their seriousness. Currently on Questrade or IBKR, using Seeking Alpha or similar. Would pay $20/month without hesitation for the right product. Smaller segment but highest lifetime value and most likely to advocate.
+
+Concrete profiles
+|  | The Active Speculator | The Confused Improver | The Aspiring Disciplined |
+|---|---|---|---|
+| Age | 25–38 | 28–42 | 32–48 |
+| Investable assets | 25K–75K | 50K–250K | 150K–500K+ |
+| Current platform | Wealthsimple Trade | Wealthsimple or Questrade | Questrade, IBKR, TD Direct |
+| Current behaviour | 10–50 trades/quarter. Follows Reddit, X tips, earnings plays. | 5–15 trades/quarter. Mix of ETFs + stocks. No clear system. | 1–5 trades/quarter. Researches before buying. Holds long-term. |
+| Pain point | "I'm putting in the time but not getting the returns." | "I don't know if what I'm doing is right." | "I need better tools to implement what I already know." |
+| Content's job | Create the moment of recognition. Name the pattern. Interrupt. | Give them language for what is wrong. Show the alternative. | Confirm they found the right place. Validate their identity. |
+| Conversion trigger | A bad quarter. A position they cannot explain. Year-end underperformance. | Repeated decision uncertainty. A friend who invests better. Market volatility they cannot navigate. | Discovering II exists. Platform quality and philosophy alignment. |
+| Would describe II as | "Made me realise what I was actually doing." | "It actually helps me understand what I'm doing." | "Finally, a platform that takes this seriously." |
+
+The journey
+These three segments represent one pipeline. The speculator becomes the confused improver becomes the aspiring disciplined investor. Content accelerates each transition. The brand does not convince anyone — it is visible and credible at the moment each person is ready to move.
+
+Stage 01: Active Speculator
+* Frequent trading, noise-driven
+* Underperforming, not admitting it
+* Occasional doubt surfaces
+* Content plants the seed
+
+Stage 02: Doubt Emerges
+* Bad quarter, unexplainable loss
+* Starts questioning the approach
+* Seeks better information
+* II content meets them here
+
+Stage 03: Confused Improver
+* Wants a framework, not tips
+* Engages with II content repeatedly
+* Subscribes to The Edge
+* Identity begins to shift
+
+Stage 04: Conversion
+* Subscribes at $20/month CAD
+* Uses calibration tools
+* Performance improves
+* Advocates to one person like them
+
+Who this is not for
+* Complete beginners who have never invested — the product assumes existing self-directed behaviour
+* People seeking a managed solution — they want a robo-advisor, not calibration tools
+* Crypto-first investors — different philosophy, different risk tolerance, different identity
+* People who want more sophisticated trading tools (options, futures) — Wealthsimple is building for them
+
+The Canadian-only constraint: II can only sign up Canadian users. This matters for every paid channel decision — broad campaigns reaching global audiences waste spend. All paid, organic, and outreach efforts must be Canada-targeted. This makes Canadian-specific communities (r/CanadianInvestor, Canadian investing podcasts, Mogo internal database) disproportionately valuable relative to their size.
+
+// 03
+Channel architecture
+Channel decisions are grounded in where each ICP segment actually spends time online — not assumptions. Each channel serves a specific segment at a specific stage of the journey. All activity is Canada-targeted only. II can only sign up Canadian users. Any paid channel that cannot be geo-targeted to Canada is excluded by default.
+
+Where each segment is — and what they do there
+Platform | Segment reached | What they do there | Data
+Reddit | All three — different subs per segment | r/CanadianInvestor (116K members) — confused improvers researching. r/PersonalFinanceCanada — broad self-directed community. r/ValueInvesting, r/SecurityAnalysis — aspiring disciplined. r/wallstreetbets, r/CanadaStocks — speculators. Reddit investors who participate in knowledge-sharing communities achieve returns averaging 3.2% higher than those who do not. | University of Toronto study; Hive Index
+Instagram | Speculator + Confused Improver | 40% of Canadians earning 100K+ follow finfluencers. The higher-income ICP consumes finance content on Instagram — but the content they trust is substantive, not entertainment. Saves and profile visits are the signal. Comments are noise. | Globe and Mail finfluencer study 2024
+X / Twitter (FinTwit) | Confused Improver + Aspiring Disciplined | The value investing community on X (FinTwit) is active and high-signal. Accounts like @Brian_Stoffel_, @awealthofcs (Ben Carlson), @LizAnnSonders attract exactly the serious-minded investor. Canadian investors follow global value investing commentary. Conversations happen around earnings, theses, behavioural finance. | Circleboom / investing.io 2025
+LinkedIn | Confused Improver + Aspiring Disciplined | Finance professionals and higher-income investors consume long-form investing thought leadership here. The professional context gives credibility to institutional-voice content. Canadian finance creators are active. Serious investing content performs without algorithm manipulation. | Upfluence / Hardbacon 2025
+Podcasts | Confused Improver + Aspiring Disciplined | The Rational Reminder (evidence-based investing, #1 Canadian investment podcast), The Canadian Investor (self-directed stocks focus), Build Wealth Canada, More Money Podcast. This audience pays attention to podcast ads in their category. High trust, high intent. | Feedspot / Apple Podcasts Canada charts 2025
+Google / AI search | All three — at moment of doubt | Investors search and use Claude/ChatGPT to research "is X stock a good investment," "how to invest better," "value investing Canada," "how to beat the market Canada." SEO and AEO capture the ICP at their highest-intent moment — when they are actively looking for a better approach. | CSA 2024 — 53% use social/digital for investment decisions
+Canadian Money Forum / Stockhouse | Confused Improver + Aspiring Disciplined | Canada's oldest investing forums. Stockhouse is Canada's #1 financial portal. Older, more established self-directed investors. High engagement, lower noise than Reddit. Less glamorous but high ICP density. | Feedspot Canadian Stock Forums 2026
+
+Channel architecture — what II does on each
+Channel | Role | Segment served | Cadence | Status
+Instagram | Primary reach and discovery. Reels reach non-followers. Carousels build saves. The speculator encounters II here mid-scroll during a moment of doubt. Visual brand system creates immediate differentiation from every other finance account. | Speculator → Confused Improver | 3 Reels + 1 Carousel + 1 Static / week | Active — Primary Reach
+LinkedIn | Primary credibility channel. Long-form posts and document carousels for the investor who wants depth. Professional context amplifies the brand's authority. Same ideas as Instagram, calibrated for professional identity. | Confused Improver + Aspiring Disciplined | 3–4 posts / week | Active — Primary Credibility
+X / Twitter | Active presence in FinTwit — the value investing conversation on X. Original content, not mirrors. Engage with investing discussions. Establish II as a voice the serious Canadian investor recognises and returns to. | Confused Improver + Aspiring Disciplined | 3–5 posts / week — original | Active — Credibility
+Email — The Edge | Primary conversion mechanism. Free entry point before $20/month. One idea per edition. No greeting. No noise. Converts consideration to conviction over 4–6 editions by shifting the reader's identity before the product is purchased. | All three — post-awareness | Weekly | Active — Critical
+Reddit | Organic contribution only. r/CanadianInvestor, r/PersonalFinanceCanada, r/ValueInvesting. Never promotional. Contribute to conversations the ICP is already having. Brand presence must earn its place through quality, not volume. | All three — different subs | Organic — as relevant | Organic Only
+Podcast Sponsorships | Phase 2 paid. The Rational Reminder, The Canadian Investor, Build Wealth Canada — these are the shows the ICP already trusts. Sponsorships here are high-intent, high-trust, and Canadian-targeted by default. Deploy from $3.5K/month budget post-250 baseline. | Confused Improver + Aspiring Disciplined | Phase 2 | Phase 2
+SEO / AEO | Long-term organic. Captures the ICP at their highest-intent moment — when they are searching or asking AI tools for a better investing approach. Requires consistent long-form website content tied to the terms this audience searches. | All three — moment of search | Ongoing — content-driven | Build Now
+Newsletter Sponsorships | Phase 2 paid. Canadian finance newsletters read by the ICP. High-trust environment, engaged audience, Canadian-targeted. Complement to podcast spend. | Confused Improver + Aspiring Disciplined | Phase 2 | Phase 2
+Meta Ads | Not yet. Risk of attracting wrong-ICP signups that churn and distort product data. Revisit once 250-baseline conversion data is available and ICP profile is confirmed. | — | — | Not Yet
+TikTok / YouTube / Threads | Never. TikTok rewards performance content — antithetical to brand. YouTube requires volume to survive. Threads has no ICP density. Absence is intentional and on-brand. | — | — | Never
+
+The governing channel rule: Every channel must be justified by where the ICP actually is — not by where we assume they are, and not by what is easiest to execute. The speculator is on Instagram and Reddit. The confused improver is on LinkedIn, Reddit, and searching Google. The aspiring disciplined is on X, podcasts, and Canadian investing forums. We go where they are.
+
+// 04
+Content strategy
+The four-category content architecture from the KARP Strategy is correct and is retained. Every piece of content belongs to one of these categories and follows the three-part post structure: Hard Claim → System Explanation → Correction.
+
+Category 01: System Failure
+Expose the industry. The system rewards behaviour that destroys returns. Name it without apology.
+
+Category 02: Behavioural Edge
+Rewire thinking. Address the psychological patterns that produce underperformance. Not advice. Diagnosis.
+
+Category 03: Capital Discipline
+What to actually do. Concrete. Uncomfortable. Non-consensus. Not a tip. A position.
+
+Category 04: Identity
+Who this is for. Filter content. Repel the wrong audience. Attract the rare investor who recognises themselves.
+
+Content formats and their purpose
+Format | Channel | Purpose | Frequency | Who executes
+Reels | Instagram | Discovery and reach. The algorithm distributes Reels to non-followers. Primary mechanism for audience growth. Black/white, text-only animation — severe aesthetic, not entertainment aesthetic. | 3 × / week | Agent → Claude Design → Polish
+Carousels | Instagram + LinkedIn | Depth and saves. The highest-saved format. Takes a single idea from the post structure and expands it across 5–7 slides. Becomes a brand artefact people return to. | 1–2 × / week | Agent → Claude Design or Figma
+Static Post | Instagram | Brand statement. Single truth. Institutional. Used sparingly so it retains weight when it appears. | 1 × / week | Agent → Claude Design
+Text Post | LinkedIn | Thought leadership and direct distribution to professional audience. Longer first line than Instagram. Same philosophy, calibrated for professional context. | 3–4 × / week | Agent (adapted from Instagram concepts)
+The Edge | Email | One idea. Timeless. Reads like internal correspondence. No greeting. Ends with a principle, not a goodbye. Converts consideration to conviction. | Weekly | Agent → Light editorial review
+
+Content production workflow
+Step 01: Agent generates
+* Concept + hard claim
+* Full 3-part copy
+* Visual brief for Claude Design
+* Midjourney image brief (if B&W photo reel)
+* Caption copy
+
+Step 02: Human reviews
+* Review concepts (15 min batch)
+* Approve or flag
+* Generate Midjourney image if needed
+* Bring brief to Claude Design
+
+Step 03: Claude Design produces
+* 3 visual / animation options
+* CEO + Marketing select one
+* Light polish applied
+
+Step 04: Compliance + Schedule
+* Submit to compliance
+* Schedule upon approval
+* Publish
+
+Step 05: Agent analyses results
+* Saves, reach, profile visits
+* Which categories performed
+* Which visual mode resonated
+* Feeds insights back to Step 01
+
+On visual tone for Reels: Two modes. The default is black background with white text appearing sequentially — institutional, severe, no music. For a portion of Reels, documentary-style black and white photography is used as background — still images generated in Midjourney using a visual brief produced by the content agent. The agent specifies what image to generate (composition, subject, mood) so the Midjourney prompt is already written. White text overlaid on the photograph. Both modes maintain the same visual severity — the image is never the point, the statement is.
+
+// 05
+The funnel
+Currently, there is no clear funnel architecture. There is a brand and a product, but no defined mechanism for moving someone from "never heard of this" to "paying subscriber." The critical missing piece is the bridge between consideration and conviction — that bridge is The Edge newsletter.
+
+01. Awareness
+A Reel, a LinkedIn post, an X thread, or a Reddit contribution reaches someone who fits the profile. They stop. They read it twice.
+
+Channels: Instagram Reels · LinkedIn · X · Reddit · Internal database outreach
+
+02. Recognition
+Something they read stops them. They recognise themselves in it. They check the account. They read more.
+
+Evidence: Account profile · Carousels · Archive
+
+03. Consideration
+They visit the website. They find the philosophy. They find the Constraints page. They read "Proceed Deliberately."
+
+Evidence: intelligentinvesting.ai · Constraints page
+
+04. Conviction
+They subscribe to The Edge — free, frictionless. Over 4 editions they begin thinking of themselves as an II-type investor. Identity is pre-committed before the product.
+
+Evidence: The Edge newsletter — free entry point
+
+05. Conversion
+Signing up for the product formalises what they already believe about themselves. $20/month. No friction required — the identity did the work.
+
+Evidence: App — Managed or Self-directed
+
+06. Advocacy
+No referral incentives. They send it to one person who is exactly like them. That is the only referral that compounds.
+
+Evidence: Silent referral — identity recognition
+
+The two website additions required immediately
+1. The Constraints Page
+A public "What We Don't Do" page. This is the highest-ROI addition to the website. Sophisticated investors who land on it immediately feel seen. It converts trust faster than any feature page.
+
+2. The Edge Signup Path
+The current homepage leads only to the app. There must be a second path: "Read The Edge." A free, low-friction entry point that captures the consideration audience before they are ready to commit $20/month.
+
+// 06
+Growth targets
+Phase | Target | Timeline | Primary lever
+Baseline | 40–50 new ICP subscribers / month | Current (May 2026) | Organic only. $10K/month Reddit spend paused — was not converting ICP.
+Phase 1 | 250 new ICP-matched subscribers / month | June 2026+ | Organic social (all channels) + Mogo internal database outreach + personal outreach. No paid until baseline is proven.
+Phase 2 | Scaling toward 1,000+ / month | Post-250 baseline | Deploy $10K/month: podcast sponsorships + LinkedIn targeted ads (Canadian, 25–45, investing) + newsletter placements.
+Year 1 End | 4,000–5,000 new subscribers / month | Month 12 | Full organic + paid combination. Referral loop active. SEO/AEO compounding.
+
+Website conversion is broken before scaling: 22,000 visitors/month currently convert at near-zero. Average session: 5 seconds. Roughly 50% of traffic is from the Mogo lending product — wrong ICP. Fix attribution, add the Constraints page, add The Edge signup path, and measure actual ICP conversion rate before deploying any paid budget. Scaling traffic into a broken funnel wastes money and distorts product data.
+
+Early signals — what working looks like before the numbers are big
+The early signal is not follower count or direct signups. It is the quality of engagement — the right kind of people responding to the right kind of content. These are the signals to watch in the first 60 days:
+
+* Saves on Instagram Reels and Carousels from accounts that look like the ICP (finance professionals, investors, serious readers)
+* Comments or shares on LinkedIn from people who reference specific investing concepts, Buffett, or value investing
+* X engagement from accounts that are clearly in the investing community — not general finance noise
+* Edge newsletter signups from people who found it through content, not referral
+* Any organic mention or share of II in a value investing Reddit thread
+
+What to ignore vs. what to measure
+Ignore: Follower count | Measure instead: Quality of new followers — are they finance professionals, serious investors? | Why: 100 right-fit followers outperform 10,000 wrong ones in every conversion metric
+Ignore: Post engagement rate | Measure instead: Saves and silent follows. Low comment volume is a signal of correctness. | Why: The right audience saves. The wrong audience comments. High comment volume is a red flag.
+Ignore: Website traffic volume | Measure instead: Time on site. Pages per session. Edge newsletter signups. | Why: A serious investor reads the Constraints page, the philosophy, and then subscribes to The Edge. That journey takes time.
+Ignore: App downloads | Measure instead: 90-day retention rate and behaviour during drawdowns | Why: Downloads measure marketing. Retention measures whether the brand promise is real.
+Ignore: Email open rate | Measure instead: Conversion rate from Edge subscriber to paid user | Why: The Edge's purpose is to pre-commit identity, then convert. Open rate is vanity. Conversion is signal.
+
+The three milestones that confirm the strategy is working
+
+30–90 Days
+The right people are following. New followers include finance professionals, institutional-adjacent investors, and people who describe themselves as long-term. Edge subscribers are growing without paid promotion.
+
+3–6 Months
+Referrals without incentives. Users forward The Edge with the message "made me think of you." Paid subscribers are staying past 90 days. People describe the platform accurately on their own.
+
+6–18 Months
+The language is adopted. People quote the brand's language back. Users describe the platform as "calming" or "different." Sophisticated investors stop asking about features.
+
+// 07
+90-day execution plan
+The plan is sequenced in three phases. Phase 0 fixes the infrastructure before any acquisition begins. Phase 1 is the push to 250 ICP-matched subscribers. Phase 2 deploys the budget and scales. Nothing in Phase 2 starts until Phase 1 is proven — a constraint the CEO agreed to.
+
+Phase 0 — Before June 2026 — Fix the foundation
+Action | Output | Who
+Fix analytics and attribution | Understand where 22K monthly website visitors actually come from. Separate lending traffic from investing traffic. Set up proper conversion tracking before any paid spend is deployed. | Anatoly
+Internal database audit | Segment Mogo's 600K email database. Identify Mobile Trade users with self-directed investing behaviour — the highest-probability ICP candidates in the existing base. Build outreach list. | Anatoly + Tarsila
+Website: Constraints page + Edge signup | Add the "What We Don't Do" page. Add The Edge free signup path to the homepage. These are the two highest-ROI website changes before any traffic is driven. | Tarsila + Dev
+Agent infrastructure | Build agents for content production. Configure Slack webhook for intelligence agents. Airtable compliance tracker. | Tarsila
+Content library | Produce content to fill 4-week queue across all formats (Reels, Carousels, LinkedIn, The Edge, X). Compliance buffer must be full before launch. | Tarsila (agent-assisted)
+Pause Reddit ads | $10K/month spend paused. Establish true organic baseline. | Anatoly
+
+Phase 1 — June 2026 — Get to 250 ICP subscribers / month
+Channel | Tactic | Who
+Organic social | Full publishing cadence live across Instagram, LinkedIn, X. Bi-weekly batch production. Compliance pipeline running. Monitor ICP quality of engagement weekly. | Tarsila
+Internal database outreach | Targeted email campaign to ICP-identified Mogo users. Not a mass blast — a segmented, specific sequence for users who match the self-directed investing profile. | Anatoly + Tarsila
+Personal outreach | Direct, targeted outreach to specific individuals — investors, finance professionals, Buffett/Munger community members — on LinkedIn and X. Small volume, high precision. Not automated. | CEO + Tarsila
+Reddit organic | Active, authentic participation in r/ValueInvesting, r/CanadianInvestor, r/SecurityAnalysis. Contribute to existing conversations. Never promotional. | Tarsila
+The Edge | Weekly edition live. Free subscription as the conversion step from social to product. All social content drives toward Edge signup, not direct app download. | Tarsila
+
+Phase 2 — Post-250 baseline — Deploy budget and scale
+Channel | Budget allocation (of $10K/month) | Rationale
+Podcast sponsorships | $3,500–4,000 / month | "We Study Billionaires" and Canadian investing podcasts. ICP pays close attention to ads in their category. Canadian reach possible through Canadian shows.
+LinkedIn targeted ads | $3,000–3,500 / month | Canadian, 25–45, finance / investing interests. Only paid social platform where Canadian ICP can be targeted precisely without wasted reach.
+Newsletter sponsorships | $2,000–2,500 / month | Canadian finance and investing newsletters. High-trust ad environment. Complement to podcast spend.
+Hold | Reserve | Do not deploy until Phase 1 conversion data is available. Knowing what content converts the ICP is more valuable than spending faster.
+
+Key constraint: Phase 2 does not start until Phase 1 is working. Getting 250 ICP-matched subscribers through organic and outreach first proves the product converts before money amplifies it. Spending $10K/month into an unproven funnel is how the Reddit budget was lost.
+
+---
+
+THE GOVERNING PRINCIPLES
+
+1. "If marketing does not increase desirability, we do not do it. We are not indifferent to uptake. We are indifferent to uptake that does not compound."
+
+2. The brand is not looking to convince anyone. They are looking to be found by the right person at the right moment.
+
+3. 250 ICP-matched subscribers first. Then scale. Never the other way around.
+
+4. Quality of engagement is the early signal. Not followers. Not downloads.
+
+5. The $10K budget is not deployed until the organic funnel is proven.
+
+6. Content that improves engagement but attracts the wrong customer fails.
+
+7. Half-severe execution is worse than no execution.
+
+8. The ICP is not looking to be convinced. They are looking to be found.

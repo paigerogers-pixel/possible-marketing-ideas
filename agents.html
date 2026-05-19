@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intelligent Investing marketing system architecture. Agent-driven operational framework for strategic marketing execution.">
+    <title>// Intelligent Investing — Agent-Driven Marketing System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --grey-90: #1a1a1a;
+            --grey-70: #4a4a4a;
+            --grey-50: #808080;
+            --grey-30: #b0b0b0;
+            --grey-15: #d8d8d8;
+            --rule: 1px solid #2a2a2a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; background: var(--black); color: var(--white); scroll-behavior: smooth; }
+        body { font-family: 'DM Mono', 'Courier New', monospace; font-weight: 300; line-height: 1.6; background: var(--black); }
+        ::-webkit-scrollbar { width: 2px; }
+        ::-webkit-scrollbar-track { background: var(--black); }
+        ::-webkit-scrollbar-thumb { background: var(--grey-70); }
+
+        /* COVER */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 4rem;
+            border-bottom: var(--rule);
+            position: relative;
+            overflow: hidden;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 79px, #0d0d0d 79px, #0d0d0d 80px);
+            pointer-events: none;
+        }
+        .cover-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+        .brand-mark { font-size: 0.8rem; font-weight: 300; letter-spacing: 0.04em; color: var(--grey-50); }
+        .cover-meta { text-align: right; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-50); line-height: 2.2; }
+        .cover-body { position: relative; z-index: 1; }
+        .cover-eyebrow { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 2.5rem; }
+        .cover-title { font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 3rem; }
+        .cover-title em { font-style: italic; color: var(--grey-30); }
+        .cover-tagline { font-size: 0.78rem; color: var(--grey-50); line-height: 1.8; }
+        .cover-bottom { display: flex; justify-content: space-between; align-items: flex-end; border-top: var(--rule); padding-top: 2rem; position: relative; z-index: 1; }
+        .status-tag { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-50); border: 1px solid var(--grey-70); padding: 0.3rem 0.7rem; }
+
+        /* WRAPPER */
+        .wrap { max-width: 900px; margin: 0 auto; padding: 0 4rem; }
+
+        /* SECTION */
+        .section { padding: 7rem 4rem; border-bottom: var(--rule); max-width: 900px; margin: 0 auto; }
+        .section-header { display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 4rem; }
+        .section-number { font-size: 0.6rem; letter-spacing: 0.2em; color: var(--grey-50); padding-top: 0.5rem; flex-shrink: 0; width: 1.5rem; }
+        .section-title { font-size: clamp(1.5rem, 3.5vw, 2.6rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; }
+        .section-title em { font-style: italic; color: var(--grey-30); }
+        .section-subtitle { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-50); margin-top: 0.6rem; }
+
+        /* TEXT */
+        .body-text { font-size: 0.85rem; line-height: 1.9; color: var(--grey-30); max-width: 620px; margin-bottom: 1.5rem; }
+
+        /* AGENT BOX */
+        .agent-box {
+            background-color: #030303;
+            border: 1px solid #111;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 2px solid var(--grey-50);
+        }
+
+        .agent-title {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .agent-subtitle {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--grey-50);
+            margin-bottom: 1.5rem;
+        }
+
+        .agent-item {
+            margin: 1rem 0;
+            padding-bottom: 0.75rem;
+        }
+
+        .agent-item-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--grey-50);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .agent-item-value {
+            font-size: 0.85rem;
+            color: var(--grey-15);
+            line-height: 1.7;
+        }
+
+        .agent-item-value strong {
+            color: var(--white);
+            font-weight: 300;
+        }
+
+        /* GRID SYSTEM */
+        .agent-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .agent-card {
+            background-color: #030303;
+            border: 1px solid #111;
+            padding: 1.75rem;
+        }
+
+        .agent-card-title {
+            font-size: 0.95rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .agent-card-meta {
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--grey-50);
+            margin-bottom: 1rem;
+        }
+
+        .agent-card-items {
+            list-style: none;
+        }
+
+        .agent-card-items li {
+            font-size: 0.78rem;
+            color: var(--grey-30);
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #111;
+        }
+
+        .agent-card-items li:last-child {
+            border-bottom: none;
+        }
+
+        .agent-card-items li::before {
+            content: '→ ';
+            color: var(--grey-70);
+            margin-right: 0.5rem;
+        }
+
+        /* WORKFLOW */
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .workflow-step {
+            background-color: #030303;
+            border: 1px solid #111;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .workflow-step::after {
+            content: '';
+            position: absolute;
+            right: -1.75rem;
+            top: 50%;
+            width: 1.5rem;
+            height: 1px;
+            background: #111;
+            transform: translateY(-50%);
+        }
+
+        .workflow-step:last-child::after {
+            display: none;
+        }
+
+        .workflow-step-num {
+            font-size: 0.6rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--grey-50);
+            margin-bottom: 0.5rem;
+        }
+
+        .workflow-step-title {
+            font-size: 0.9rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            font-weight: 300;
+        }
+
+        .workflow-step-desc {
+            font-size: 0.75rem;
+            color: var(--grey-30);
+            line-height: 1.6;
+        }
+
+        /* RULE LIST */
+        .rule-list { list-style: none; margin: 2rem 0; }
+        .rule-list li { display: flex; gap: 1.5rem; padding: 0.9rem 0; border-bottom: var(--rule); font-size: 0.82rem; color: var(--grey-15); }
+        .rule-list li::before { content: '—'; color: var(--grey-50); flex-shrink: 0; }
+
+        /* SUB LABEL */
+        .sub-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-50); margin: 3rem 0 1.25rem; font-weight: 300; }
+
+        /* FOOTER */
+        footer { border-top: var(--rule); padding: 2rem 4rem; display: flex; justify-content: space-between; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-70); max-width: 900px; margin: 0 auto; }
+
+        @media (max-width: 680px) {
+            .cover, .section, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+            .workflow { grid-template-columns: 1fr; }
+            .workflow-step::after { display: none; }
+            footer { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cover">
+    <div class="cover-top">
+        <div class="brand-mark">// INTELLIGENTINVESTING.AI</div>
+        <div class="cover-meta">Status — Internal<br>Not for Distribution<br>Date — May 2026<br>Version — 01</div>
+    </div>
+    <div class="cover-body">
+        <div class="cover-eyebrow">Agent-Driven Marketing System</div>
+        <h1 class="cover-title">How <em>agents</em><br>execute<br>marketing at<br>scale.</h1>
+        <div class="cover-tagline">A 10-layer operational framework for coordinating intelligent agents across the entire marketing lifecycle.</div>
+    </div>
+    <div class="cover-bottom">
+        <div class="status-tag">Internal — Not for Distribution</div>
+        <div class="brand-mark" style="color: #fff;">Orchestrated intelligence across the entire system.</div>
+    </div>
+</div>
+
+<!-- INTRO SECTION -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-number">—</div>
+        <div>
+            <h2 class="section-title">The Agent-Driven Operating Model</h2>
+            <div class="section-subtitle">10 layers of coordinated intelligence</div>
+        </div>
+    </div>
+
+    <p class="body-text">Marketing at scale requires more than strategy—it requires orchestrated execution. The agent-driven model treats each functional category as a specialized intelligence system responsible for specific outcomes within the broader marketing ecosystem.</p>
+
+    <p class="body-text">Each agent operates autonomously within guardrails defined by the strategic doctrine. Each has clear inputs, outputs, constraints, and success metrics. Together, they create a coherent system where discipline, intelligence, and execution compound.</p>
+
+    <p class="sub-label">The 10 Layers</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; font-size: 0.85rem;">
+        <div style="color: var(--grey-30);">
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">01. Positioning</strong><br>Strategic doctrine translation into market language.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">02. Audience</strong><br>Psychographic targeting and persona development.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">03. Channels</strong><br>Medium selection and audience reach strategy.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">04. Content</strong><br>Narrative creation and intellectual substance.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">05. Pipeline</strong><br>Asset production and distribution workflows.</p>
+        </div>
+        <div style="color: var(--grey-30);">
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">06. Funnel</strong><br>User journey mapping and conversion optimization.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">07. Agents</strong><br>AI-driven automation and decision-making systems.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">08. Intelligence</strong><br>Data collection, analysis, and insight generation.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">09. Measurement</strong><br>Quantitative tracking and performance validation.</p>
+            <p style="margin-bottom: 1.5rem;"><strong style="color: var(--white);">10. Execution</strong><br>Operational deployment and real-time management.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 01 POSITIONING -->
+<div class="section" id="s01">
+    <div class="section-header">
+        <div class="section-number">01</div>
+        <div><h2 class="section-title">Positioning <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Translates the strategic doctrine into market language. This agent ensures that every outward-facing communication reflects the core positioning without drift or distortion.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Positioning Intelligence Agent</div>
+        <div class="agent-subtitle">Doctrine guardrails & positioning coherence</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Strategic doctrine | Market research | Competitive positioning | Brand guidelines | Customer feedback
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Monitor all marketing output and ensure it stays aligned with core positioning thesis: <strong>"Serious investing as a discipline-based competitive edge."</strong> Flag messaging drift. Enforce consistency across channels.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • Is this message within positioning bounds?<br>
+                • Does it reinforce the "discipline over claims" thesis?<br>
+                • Does it signal seriousness or entertainment?<br>
+                • Is the status hierarchy correct?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Positioning approval/rejection | Messaging recommendations | Coherence score | Doctrine alignment reports
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                % of marketing output approved on first review | Consistency score across all channels
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 02 AUDIENCE -->
+<div class="section" id="s02">
+    <div class="section-header">
+        <div class="section-number">02</div>
+        <div><h2 class="section-title">Audience <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Builds and maintains intelligent audience models. Understands who we're trying to reach, why they're reachable, what motivates them, and how to identify them at scale.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Audience Intelligence Agent</div>
+        <div class="agent-subtitle">Persona development & psychographic targeting</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Behavioral data | Demographic signals | Interest mapping | Engagement patterns | User research
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Create and continuously refine audience models. Identify high-intent users before they self-identify. Map psychographic profiles of people willing to pursue serious investing mastery. Segment by motivation type, risk tolerance, and time horizon.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Core Personas</span>
+            <div class="agent-item-value">
+                <strong>The Ambitious Operator:</strong> Founders, engineers, serious entrepreneurs<br>
+                <strong>The Disciplined Accumulator:</strong> People with 20+ year horizons<br>
+                <strong>The Recovering Trader:</strong> Former active investors seeking discipline<br>
+                <strong>The Institutional Thinker:</strong> People seeking systems, not tips
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • Who has the highest lifetime value?<br>
+                • Who is most responsive to discipline messaging?<br>
+                • What triggers indicate serious investing intent?<br>
+                • How do we identify them at scale?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Persona definitions | Psychographic maps | Audience segments | Intent signals | Targeting recommendations
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Conversion rate by persona | Lifetime value alignment | Retention by audience segment
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 03 CHANNELS -->
+<div class="section" id="s03">
+    <div class="section-header">
+        <div class="section-number">03</div>
+        <div><h2 class="section-title">Channels <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Determines where audiences live and how to reach them effectively. Not all channels are created equal. This agent allocates resources to highest-impact, most-aligned channels.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Channel Allocation Agent</div>
+        <div class="agent-subtitle">Medium selection & audience reach optimization</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Audience location data | Channel performance history | Cost per acquisition | Brand alignment scoring
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Identify which channels attract high-intent, discipline-oriented audiences. Avoid cheap-impression channels. Favor quality of reach over volume. Allocate based on both performance and positioning fit.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">High-Integrity Channels</span>
+            <div class="agent-item-value">
+                <strong>Direct:</strong> Email, newsletter (longest time with audience)<br>
+                <strong>Owned:</strong> Blog, documentation (deep content)<br>
+                <strong>Earned:</strong> Press, citations (third-party validation)<br>
+                <strong>Operator Communities:</strong> HN, founder networks (high-intent)<br>
+                <strong>Educational:</strong> Masterclasses, seminars (depth-oriented)
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Avoid</span>
+            <div class="agent-item-value">
+                • High-noise social feeds | Meme-oriented channels<br>
+                • Viral-at-all-costs platforms | Gambling-adjacent communities<br>
+                • Cheap impression farms | Low-intent spray tactics
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • Does this channel attract serious investors?<br>
+                • What's the quality/cost ratio vs. positioning fit?<br>
+                • Can we maintain discipline in this medium?<br>
+                • What's the customer acquisition cost?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Channel prioritization | Budget allocation | Audience reach forecasts | Medium strategy recommendations
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Cost per quality acquisition | Positioning fit score | Long-term retention rate
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 04 CONTENT -->
+<div class="section" id="s04">
+    <div class="section-header">
+        <div class="section-number">04</div>
+        <div><h2 class="section-title">Content <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Creates the intellectual substance that differentiates the brand. This agent ensures content is serious, substantive, and reflects genuine depth rather than surface-level marketing.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Content Intelligence Agent</div>
+        <div class="agent-subtitle">Narrative creation & intellectual substance</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Research findings | Market data | User research | Investment insights | Positioning doctrine
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Generate content that demonstrates mastery, discipline, and long-term thinking. Bridge between strategic doctrine and audience understanding. Create narratives that make discipline feel aspirational.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Content Tiers</span>
+            <div class="agent-item-value">
+                <strong>Tier 1 (Flagship):</strong> Deep essays on investing discipline, long-term frameworks, behavioral mastery<br>
+                <strong>Tier 2 (Educational):</strong> Structured guides, principles, systems documentation<br>
+                <strong>Tier 3 (Signals):</strong> Market insights, research summaries, decision frameworks
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Content DNA</span>
+            <div class="agent-item-value">
+                • No hype. No certainty claims. Probabilistic thinking.<br>
+                • Deep, not shallow. Decade-long thinking, not quarterly.<br>
+                • Intellectual honesty over persuasion.<br>
+                • Challenge the reader, not comfort them.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • Does this content demonstrate mastery?<br>
+                • Is it intellectually honest?<br>
+                • Does it elevate the discipline or dilute it?<br>
+                • Would a serious investor find this valuable?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Content pieces | Narrative frameworks | Messaging systems | Educational assets
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Depth engagement time | Citation/reference rate | Sharing by target personas | Quality score
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 05 PIPELINE -->
+<div class="section" id="s05">
+    <div class="section-header">
+        <div class="section-number">05</div>
+        <div><h2 class="section-title">Pipeline <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Manages the production and distribution infrastructure. This agent ensures consistent asset creation, quality control, and efficient logistics across all marketing operations.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Content Pipeline Agent</div>
+        <div class="agent-subtitle">Asset production & distribution workflows</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Content assets | Production schedule | Distribution channels | Publishing calendar
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Maintain consistent, high-quality content production. Manage editorial calendars. Coordinate distribution across channels. Track asset performance. Optimize for quality over volume.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Pipeline Tiers</span>
+            <div class="agent-item-value">
+                <strong>Weekly:</strong> Signals, market thoughts, research digests<br>
+                <strong>Bi-weekly:</strong> Educational content, frameworks, principles<br>
+                <strong>Monthly:</strong> Long-form essays, investigations, doctrine evolution<br>
+                <strong>Quarterly:</strong> Major releases, product narratives, strategic communications
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Quality Gates</span>
+            <div class="agent-item-value">
+                • Editorial review (clarity, precision)<br>
+                • Positioning alignment (doctrine check)<br>
+                • Audience relevance (persona fit)<br>
+                • Factual accuracy (research validation)
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • What's the optimal publication cadence?<br>
+                • Which assets are ready for distribution?<br>
+                • Where should each piece be published?<br>
+                • How do we maintain quality under volume?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Publishing calendar | Production schedules | Distribution lists | Quality reports
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                On-time publication rate | Quality consistency | Asset reusability | Distribution efficiency
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 06 FUNNEL -->
+<div class="section" id="s06">
+    <div class="section-header">
+        <div class="section-number">06</div>
+        <div><h2 class="section-title">Funnel <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Maps the customer journey from awareness to engagement to conversion. Optimizes each stage for both throughput and quality, ensuring that users who convert are genuinely aligned with the positioning.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Conversion Funnel Agent</div>
+        <div class="agent-subtitle">User journey mapping & conversion optimization</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                User behavior data | Conversion metrics | Dropout patterns | Audience feedback
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Design and optimize the user journey from first touch to signup. Minimize friction for serious users while maintaining positioning integrity. Track dropoff rates. Identify where quality users abandon.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Funnel Stages</span>
+            <div class="agent-item-value">
+                <strong>Awareness:</strong> Discovery via content, channels, recommendations<br>
+                <strong>Consideration:</strong> Educational consumption, framework exploration<br>
+                <strong>Intent:</strong> Serious investigation, trial access, waitlist signup<br>
+                <strong>Decision:</strong> Signup, account creation, initial setup<br>
+                <strong>Activation:</strong> First portfolio action, commitment signal
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Optimization Principles</span>
+            <div class="agent-item-value">
+                • Minimize friction for genuine users | Maintain positioning at each step<br>
+                • Educate, don't manipulate | Measure quality, not just volume<br>
+                • Track long-term retention, not just conversion
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • Where are we losing serious users?<br>
+                • Is the messaging consistent across stages?<br>
+                • Are we measuring the right conversion goals?<br>
+                • What's our quality-adjusted conversion rate?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Funnel mapping | Conversion rates | Optimization recommendations | Cohort analysis
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Quality-adjusted conversion rate | Activation retention | Long-term user value
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 07 AGENTS -->
+<div class="section" id="s07">
+    <div class="section-header">
+        <div class="section-number">07</div>
+        <div><h2 class="section-title">Agents <em>Orchestration</em></h2></div>
+    </div>
+
+    <p class="body-text">This is the meta-layer: how AI agents coordinate with each other to execute marketing at scale. Agents make real-time decisions, learn from data, and adapt based on outcomes.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Agent Orchestration System</div>
+        <div class="agent-subtitle">AI-driven automation & decision-making</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Agent Types</span>
+            <div class="agent-item-value">
+                <strong>Decision Agents:</strong> Positioning, audience, channels, funnel<br>
+                <strong>Creation Agents:</strong> Content, copy, asset generation<br>
+                <strong>Execution Agents:</strong> Publishing, distribution, timing<br>
+                <strong>Analysis Agents:</strong> Performance tracking, insight generation<br>
+                <strong>Optimization Agents:</strong> A/B testing, targeting refinement, budget allocation
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Coordination Patterns</span>
+            <div class="agent-item-value">
+                <strong>Sequential:</strong> Content Agent → Pipeline Agent → Execution Agent → Measurement Agent<br>
+                <strong>Parallel:</strong> Multiple content themes created simultaneously<br>
+                <strong>Feedback Loops:</strong> Measurement Agent → Intelligence Agent → Optimization Agent<br>
+                <strong>Approval Gates:</strong> Positioning Agent validates before execution
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Agent Communication</span>
+            <div class="agent-item-value">
+                Agents share data through structured APIs. Each agent publishes outputs that other agents consume. Real-time feedback loops enable rapid optimization. Positioning Agent maintains override authority.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Automations</span>
+            <div class="agent-item-value">
+                • Content tagging and categorization<br>
+                • Audience matching and segmentation<br>
+                • Channel selection based on content type<br>
+                • Optimal publish timing by audience<br>
+                • Email list segmentation and personalization<br>
+                • Performance tracking and reporting
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • When should agents defer to humans?<br>
+                • How do we maintain quality at scale?<br>
+                • What guardrails prevent drift?<br>
+                • How do agents learn from failure?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Automated workflows | Publishing schedules | Distribution decisions | Performance dashboards
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Scale of execution | Quality consistency | Time to output | Cost per acquisition
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 08 INTELLIGENCE -->
+<div class="section" id="s08">
+    <div class="section-header">
+        <div class="section-number">08</div>
+        <div><h2 class="section-title">Intelligence <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Collects, analyzes, and generates insights from all marketing activity. This agent transforms raw data into actionable intelligence that informs decisions across all other agents.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Intelligence & Insight Agent</div>
+        <div class="agent-subtitle">Data collection, analysis & insight generation</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                All user data | Content performance | Engagement metrics | Conversion data | Market signals | Competitive intelligence
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Synthesize data into patterns and insights. Identify what's working, what's not, and why. Generate hypotheses. Recommend optimizations. Provide early warning signals on performance drift.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Analyses</span>
+            <div class="agent-item-value">
+                <strong>Audience Analysis:</strong> Who engages deepest? Who converts? Who stays?<br>
+                <strong>Content Analysis:</strong> Which topics drive highest value users? What messaging resonates?<br>
+                <strong>Funnel Analysis:</strong> Where are bottlenecks? Which stages leak?<br>
+                <strong>Channel Analysis:</strong> Which channels deliver best quality?<br>
+                <strong>Competitive Analysis:</strong> What are competitors missing? Where do we lead?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • What signals indicate high-intent users?<br>
+                • Which content types drive retention?<br>
+                • Where should we invest more?<br>
+                • What's the true ROI of each channel?<br>
+                • Are we attracting the right audience?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Insight reports | Performance dashboards | Optimization recommendations | Hypothesis documents | Early warning alerts
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Time to insight | Insight accuracy | Adoption rate of recommendations | ROI of optimizations based on insights
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 09 MEASUREMENT -->
+<div class="section" id="s09">
+    <div class="section-header">
+        <div class="section-number">09</div>
+        <div><h2 class="section-title">Measurement <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Defines and tracks metrics that matter. Separates vanity metrics from real performance indicators. Ensures data integrity and enables fact-based decision-making across all agents.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Measurement & Attribution Agent</div>
+        <div class="agent-subtitle">Quantitative tracking & performance validation</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Product events | Marketing activity | User behavior | Business outcomes | Financial data
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Establish ground truth on what's working. Track metrics that correlate with long-term business outcomes. Avoid vanity metrics. Enable attribution from marketing activity to business results.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Core Metrics</span>
+            <div class="agent-item-value">
+                <strong>Awareness Stage:</strong> Reach, impressions by quality, brand recall<br>
+                <strong>Engagement Stage:</strong> Time-on-content, depth score, return visits<br>
+                <strong>Conversion Stage:</strong> Signup rate, quality conversion rate, cost per acquisition<br>
+                <strong>Retention Stage:</strong> 30/60/90-day retention, LTV, churn rate<br>
+                <strong>Value Stage:</strong> Portfolio value, activity consistency, investment discipline
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Vanity Metrics to Avoid</span>
+            <div class="agent-item-value">
+                • Total impressions | Viral coefficients | Engagement theater<br>
+                • Likes/shares without depth | Growth-at-all-costs metrics<br>
+                • Metrics that don't correlate with business outcomes
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • Which metrics predict user success?<br>
+                • What's the true CAC accounting for lifetime?<br>
+                • Are we measuring positioning fit?<br>
+                • How do we attribute outcomes to marketing?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Performance dashboards | Cohort reports | Attribution models | KPI tracking | Anomaly alerts
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                Data accuracy | Metric correlation with business outcomes | Decision velocity enabled
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 10 EXECUTION -->
+<div class="section" id="s10">
+    <div class="section-header">
+        <div class="section-number">10</div>
+        <div><h2 class="section-title">Execution <em>Agent</em></h2></div>
+    </div>
+
+    <p class="body-text">Converts all prior layers into real-world action. This agent manages the operational execution: publishing schedules, distribution logistics, timing optimization, and real-time decision-making.</p>
+
+    <div class="agent-box">
+        <div class="agent-title">Operational Execution Agent</div>
+        <div class="agent-subtitle">Deployment & real-time management</div>
+        
+        <div class="agent-item">
+            <span class="agent-item-label">Inputs</span>
+            <div class="agent-item-value">
+                Content pipeline | Publishing calendar | Optimization signals | Real-time performance data | Audience availability
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Primary Function</span>
+            <div class="agent-item-value">
+                Execute all marketing operations with precision and discipline. Publish at optimal times. Distribute through correct channels. Make real-time adjustments based on performance. Maintain consistency despite complexity.
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Core Responsibilities</span>
+            <div class="agent-item-value">
+                <strong>Publishing:</strong> Website, blog, documentation updates<br>
+                <strong>Distribution:</strong> Email campaigns, newsletter, social posts<br>
+                <strong>Timing:</strong> Optimal publish/send times by audience<br>
+                <strong>Personalization:</strong> Segment-specific messaging and offers<br>
+                <strong>Real-time Adjustment:</strong> Performance-based tactical changes<br>
+                <strong>Coordination:</strong> Cross-channel consistency
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Execution Standards</span>
+            <div class="agent-item-value">
+                • 99.9% uptime on owned channels<br>
+                • Zero messaging drift (Positioning Agent approval)<br>
+                • Consistent cadence across all channels<br>
+                • Optimal send/publish times<br>
+                • Real-time performance monitoring
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Key Decisions</span>
+            <div class="agent-item-value">
+                • When should we publish this content?<br>
+                • Which audience segments see what?<br>
+                • Should we pause based on performance?<br>
+                • Do we maintain schedule or optimize for event?<br>
+                • What's the right channel mix?
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Outputs</span>
+            <div class="agent-item-value">
+                Published assets | Distributed campaigns | Performance data | Execution reports | Operational logs
+            </div>
+        </div>
+
+        <div class="agent-item">
+            <span class="agent-item-label">Success Metric</span>
+            <div class="agent-item-value">
+                On-time execution rate | Messaging consistency | Channel uptime | Performance accuracy
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INTEGRATION SECTION -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-number">—</div>
+        <div><h2 class="section-title">Agent Integration <em>& Coordination</em></h2></div>
+    </div>
+
+    <p class="body-text">The power of the agent system lies not in individual agents, but in how they coordinate. Each agent has clear inputs and outputs. Each feeds into the next in a coherent workflow.</p>
+
+    <p class="sub-label">The Agent Workflow</p>
+
+    <div class="workflow">
+        <div class="workflow-step">
+            <div class="workflow-step-num">01 Positioning</div>
+            <div class="workflow-step-title">Define Guardrails</div>
+            <div class="workflow-step-desc">Positioning Agent validates all marketing must align with core thesis: serious investing as discipline.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">02 Audience</div>
+            <div class="workflow-step-title">Identify Targets</div>
+            <div class="workflow-step-desc">Audience Agent develops personas of people willing to pursue investing mastery over decades.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">03 Channels</div>
+            <div class="workflow-step-title">Select Media</div>
+            <div class="workflow-step-desc">Channels Agent identifies where high-intent audiences live and what channels allow positioning consistency.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">04 Content</div>
+            <div class="workflow-step-title">Create Assets</div>
+            <div class="workflow-step-desc">Content Agent develops substantive material aligned with positioning and tailored to audiences.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">05 Pipeline</div>
+            <div class="workflow-step-title">Produce & Queue</div>
+            <div class="workflow-step-desc">Pipeline Agent manages production schedules, quality gates, and publishing calendars.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">06 Funnel</div>
+            <div class="workflow-step-title">Map Journey</div>
+            <div class="workflow-step-desc">Funnel Agent optimizes user journey from awareness to activation, maintaining positioning throughout.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">07 Execution</div>
+            <div class="workflow-step-title">Deploy & Distribute</div>
+            <div class="workflow-step-desc">Execution Agent publishes assets, distributes through channels, optimizes timing and personalization.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">08 Measurement</div>
+            <div class="workflow-step-title">Track & Validate</div>
+            <div class="workflow-step-desc">Measurement Agent collects performance data, calculates metrics, enables attribution.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">09 Intelligence</div>
+            <div class="workflow-step-title">Analyze & Recommend</div>
+            <div class="workflow-step-desc">Intelligence Agent synthesizes data into patterns, generates insights, recommends optimizations.</div>
+        </div>
+        <div class="workflow-step">
+            <div class="workflow-step-num">10 Feedback Loop</div>
+            <div class="workflow-step-title">Learn & Iterate</div>
+            <div class="workflow-step-desc">Insights feed back into all agents. System continuously optimizes based on measured outcomes.</div>
+        </div>
+    </div>
+
+    <p class="sub-label">The Key Principle: Coherence at Scale</p>
+    <p class="body-text">Each agent operates autonomously within guardrails. But the system is coherent because every agent shares the same positioning doctrine, the same understanding of target audience, and the same metrics for success. One agent's output becomes another's input. The system scales without drift.</p>
+
+    <p class="body-text">This is how you execute sophisticated marketing at scale without centralized control. This is how you maintain discipline while moving fast. This is how you keep positioning integrity as the system grows more complex.</p>
+</div>
+
+<footer>
+    <div style="color: var(--grey-50);">Agent-driven marketing systems. Operating at scale.</div>
+    <div style="color: var(--grey-70);">Version 01 — May 2026</div>
+</footer>
+
+</body>
+</html>

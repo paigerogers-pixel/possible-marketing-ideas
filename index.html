@@ -3,410 +3,683 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A decision system for how serious marketing operates. Long-term thinking. Modern strategy.">
-    <title>Marketing Ideas — A Decision System</title>
+    <meta name="description" content="A decision system for serious long-term capital allocation. The operating system for intelligent investing.">
+    <title>// Intelligent Investing — Strategic Marketing Doctrine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --grey-90: #1a1a1a;
+            --grey-70: #4a4a4a;
+            --grey-50: #808080;
+            --grey-30: #b0b0b0;
+            --grey-15: #d8d8d8;
+            --rule: 1px solid #2a2a2a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; background: var(--black); color: var(--white); scroll-behavior: smooth; }
+        body { font-family: 'DM Mono', 'Courier New', monospace; font-weight: 300; line-height: 1.6; background: var(--black); }
+        ::-webkit-scrollbar { width: 2px; }
+        ::-webkit-scrollbar-track { background: var(--black); }
+        ::-webkit-scrollbar-thumb { background: var(--grey-70); }
+
+        /* COVER */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 4rem;
+            border-bottom: var(--rule);
+            position: relative;
+            overflow: hidden;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 79px, #0d0d0d 79px, #0d0d0d 80px);
+            pointer-events: none;
+        }
+        .cover-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+        .brand-mark { font-size: 0.8rem; font-weight: 300; letter-spacing: 0.04em; color: var(--grey-50); }
+        .cover-meta { text-align: right; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-50); line-height: 2.2; }
+        .cover-body { position: relative; z-index: 1; }
+        .cover-eyebrow { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 2.5rem; }
+        .cover-title { font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 3rem; }
+        .cover-title em { font-style: italic; color: var(--grey-30); }
+        .cover-tagline { font-size: 0.78rem; color: var(--grey-50); line-height: 1.8; }
+        .cover-bottom { display: flex; justify-content: space-between; align-items: flex-end; border-top: var(--rule); padding-top: 2rem; position: relative; z-index: 1; }
+        .status-tag { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-50); border: 1px solid var(--grey-70); padding: 0.3rem 0.7rem; }
+
+        /* WRAPPER */
+        .wrap { max-width: 900px; margin: 0 auto; padding: 0 4rem; }
+
+        /* TOC */
+        .toc { padding: 6rem 4rem; border-bottom: var(--rule); max-width: 900px; margin: 0 auto; }
+        .section-label { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 3rem; }
+        .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .toc-item { display: flex; gap: 1.5rem; padding: 1.1rem 0; border-bottom: var(--rule); text-decoration: none; color: inherit; transition: color 0.2s; }
+        .toc-item:hover { color: var(--grey-30); }
+        .toc-num { font-size: 0.6rem; color: var(--grey-50); width: 1.5rem; flex-shrink: 0; padding-top: 0.2rem; }
+        .toc-name { font-size: 0.82rem; }
+
+        /* SECTION */
+        .section { padding: 7rem 4rem; border-bottom: var(--rule); max-width: 900px; margin: 0 auto; }
+        .section-header { display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 4rem; }
+        .section-number { font-size: 0.6rem; letter-spacing: 0.2em; color: var(--grey-50); padding-top: 0.5rem; flex-shrink: 0; width: 1.5rem; }
+        .section-title { font-size: clamp(1.5rem, 3.5vw, 2.6rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; }
+        .section-title em { font-style: italic; color: var(--grey-30); }
+        .section-subtitle { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-50); margin-top: 0.6rem; }
+
+        /* TEXT */
+        .body-text { font-size: 0.85rem; line-height: 1.9; color: var(--grey-30); max-width: 620px; margin-bottom: 1.5rem; }
+
+        /* BELIEF BLOCK */
+        .belief { border-left: 1px solid var(--white); padding-left: 2rem; margin: 2.5rem 0; }
+        .belief p { font-size: 1rem; line-height: 1.75; color: var(--white); font-weight: 300; }
+
+        /* RULE LIST */
+        .rule-list { list-style: none; margin: 2rem 0; }
+        .rule-list li { display: flex; gap: 1.5rem; padding: 0.9rem 0; border-bottom: var(--rule); font-size: 0.82rem; color: var(--grey-15); }
+        .rule-list li::before { content: '—'; color: var(--grey-50); flex-shrink: 0; }
+
+        /* STATUS HIERARCHY */
+        .status-hierarchy { margin: 2.5rem 0; }
+        .hierarchy-section { margin: 1.5rem 0; }
+        .hierarchy-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: var(--rule); }
+        .hierarchy-items { list-style: none; }
+        .hierarchy-items li { font-size: 0.85rem; padding: 0.6rem 0; color: var(--grey-15); border-bottom: 1px solid #111; }
+        .hierarchy-items li::before { content: '• '; color: var(--grey-50); margin-right: 0.5rem; }
+        .hierarchy-items li:last-child { border-bottom: none; }
+
+        /* COMPARISON TABLE */
+        .compare-table { margin: 2rem 0; }
+        .compare-table h4 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 1rem; }
+        .compare-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .compare-col { padding: 1.5rem; background-color: #030303; border: 1px solid #111; }
+        .compare-col h5 { font-size: 0.8rem; color: var(--white); margin-bottom: 1rem; }
+        .compare-col ul { list-style: none; }
+        .compare-col li { font-size: 0.8rem; color: var(--grey-30); padding: 0.4rem 0; border-bottom: 1px solid #111; }
+        .compare-col li::before { content: '— '; color: var(--grey-70); }
+        .compare-col li:last-child { border-bottom: none; }
+
+        /* ARCHETYPE GRID */
+        .archetype-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+        .archetype-col { padding: 1.5rem; background-color: #030303; border: 1px solid #111; }
+        .archetype-col h4 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 1rem; }
+        .archetype-col ul { list-style: none; }
+        .archetype-col li { font-size: 0.8rem; color: var(--grey-30); padding: 0.3rem 0; border-bottom: 1px solid #111; }
+        .archetype-col li::before { content: '– '; color: var(--grey-70); }
+        .archetype-col li:last-child { border-bottom: none; }
+
+        /* MESSAGING BLOCKS */
+        .messaging-block { margin: 2rem 0; padding: 1.5rem; background-color: #030303; border: 1px solid #111; }
+        .messaging-block h4 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 1rem; }
+        .messaging-avoid, .messaging-prefer { margin: 1rem 0; }
+        .messaging-avoid h5, .messaging-prefer h5 { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-50); margin-bottom: 0.5rem; }
+        .messaging-list { list-style: none; }
+        .messaging-list li { font-size: 0.8rem; color: var(--grey-30); padding: 0.3rem 0; }
+        .messaging-list li::before { content: '— '; color: var(--grey-70); margin-right: 0.5rem; }
+
+        /* LAYER STRUCTURE */
+        .layer-structure { margin: 2.5rem 0; }
+        .layer { padding: 2rem; background-color: #030303; border: 1px solid #111; margin-bottom: 1.5rem; }
+        .layer-title { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 1rem; }
+        .layer-subtitle { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-50); margin: 1rem 0 0.5rem; }
+        .layer ul { list-style: none; }
+        .layer li { font-size: 0.8rem; color: var(--grey-30); padding: 0.3rem 0; border-bottom: 1px solid #111; }
+        .layer li::before { content: '– '; color: var(--grey-70); margin-right: 0.5rem; }
+        .layer li:last-child { border-bottom: none; }
+
+        /* TABLE */
+        .data-table { width: 100%; border-collapse: collapse; margin: 2.5rem 0; font-size: 0.78rem; }
+        .data-table thead tr { border-bottom: 1px solid var(--grey-70); }
+        .data-table th { text-align: left; padding: 0.75rem 2rem 0.75rem 0; font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.58rem; color: var(--grey-50); }
+        .data-table td { padding: 0.9rem 2rem 0.9rem 0; border-bottom: var(--rule); color: var(--grey-15); vertical-align: top; line-height: 1.6; }
+        .data-table td:last-child { color: var(--white); }
+
+        /* PROFILE GRID */
+        .profile-row { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; padding: 1rem 0; border-bottom: var(--rule); font-size: 0.8rem; }
+        .profile-label { color: var(--grey-50); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 0.15rem; }
+        .profile-value { color: var(--grey-15); }
+
+        /* VOICE */
+        .voice-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 1rem 0; border-bottom: var(--rule); font-size: 0.8rem; }
+        .voice-old { color: var(--grey-50); text-decoration: line-through; }
+        .voice-new { color: var(--grey-15); }
+
+        /* RITUAL */
+        .ritual-list { list-style: none; counter-reset: ritual; margin: 2rem 0; }
+        .ritual-list li { counter-increment: ritual; display: grid; grid-template-columns: 1.5rem 1fr; gap: 1.5rem; padding: 1.1rem 0; border-bottom: var(--rule); font-size: 0.82rem; color: var(--grey-15); }
+        .ritual-list li::before { content: counter(ritual); color: var(--grey-50); font-size: 0.65rem; padding-top: 0.15rem; }
+
+        /* SUBSECTION LABEL */
+        .sub-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-50); margin: 3rem 0 1.25rem; font-weight: 300; }
+
+        /* OATH */
+        .oath { padding: 6rem 4rem; border-top: var(--rule); max-width: 900px; margin: 0 auto; }
+        .oath-text { font-size: clamp(0.95rem, 2.2vw, 1.25rem); line-height: 2.1; color: var(--grey-30); max-width: 480px; }
+        .oath-text strong { color: var(--white); font-weight: 300; }
+        .oath-spacer { display: block; height: 1.5rem; }
+
+        /* FINAL */
+        .final { padding: 6rem 4rem; max-width: 900px; margin: 0 auto; border-top: var(--rule); }
+        .final-text { font-size: clamp(1.6rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.02em; }
+        .final-text em { font-style: italic; color: var(--grey-30); }
+
+        /* FOOTER */
+        footer { border-top: var(--rule); padding: 2rem 4rem; display: flex; justify-content: space-between; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-70); max-width: 900px; margin: 0 auto; }
+
+        @media (max-width: 680px) {
+            .cover, .section, .toc, .oath, .final, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .archetype-grid, .compare-cols { grid-template-columns: 1fr; }
+            .profile-row { grid-template-columns: 130px 1fr; }
+            .voice-row { grid-template-columns: 1fr; }
+            .voice-old { display: none; }
+            footer { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div class="logo">// MARKETING IDEAS</div>
-            <ul class="nav-links">
-                <li><a href="#core" class="nav-link">Core Belief</a></li>
-                <li><a href="#positioning" class="nav-link">Positioning</a></li>
-                <li><a href="#content" class="nav-link">Content</a></li>
-                <li><a href="#voice" class="nav-link">Voice</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+
+<div class="cover">
+    <div class="cover-top">
+        <div class="brand-mark">// INTELLIGENTINVESTING.AI</div>
+        <div class="cover-meta">Status — Internal<br>Not for Distribution<br>Date — May 2026<br>Version — 02</div>
+    </div>
+    <div class="cover-body">
+        <div class="cover-eyebrow">Strategic Marketing Doctrine — Vol. 02</div>
+        <h1 class="cover-title">A decision<br>system for how<br><em>Intelligent<br>Investing</em><br>occupies the<br>cultural space.</h1>
+        <div class="cover-tagline">Status is not claimed through superiority.<br>It is earned through discipline, difficulty, and delayed validation.</div>
+    </div>
+    <div class="cover-bottom">
+        <div class="status-tag">Internal — Not for Distribution</div>
+        <div class="brand-mark" style="color: #fff;">The operating system for serious long-term capital allocation.</div>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+    <div class="section-label">Contents</div>
+    <div class="toc-grid">
+        <a href="#s01" class="toc-item"><span class="toc-num">01</span><span class="toc-name">The Positioning Shift</span></a>
+        <a href="#s02" class="toc-item"><span class="toc-num">02</span><span class="toc-name">Status Through Discipline</span></a>
+        <a href="#s03" class="toc-item"><span class="toc-num">03</span><span class="toc-name">The Emotional Frame</span></a>
+        <a href="#s04" class="toc-item"><span class="toc-num">04</span><span class="toc-name">The Market Opportunity</span></a>
+        <a href="#s05" class="toc-item"><span class="toc-num">05</span><span class="toc-name">Brand Archetypes</span></a>
+        <a href="#s06" class="toc-item"><span class="toc-num">06</span><span class="toc-name">Messaging Strategy</span></a>
+        <a href="#s07" class="toc-item"><span class="toc-num">07</span><span class="toc-name">Cultural Content Doctrine</span></a>
+        <a href="#s08" class="toc-item"><span class="toc-num">08</span><span class="toc-name">The Anduril Model</span></a>
+        <a href="#s09" class="toc-item"><span class="toc-num">09</span><span class="toc-name">Two-Layer Strategy</span></a>
+        <a href="#s10" class="toc-item"><span class="toc-num">10</span><span class="toc-name">Tone & Visual Direction</span></a>
+        <a href="#s11" class="toc-item"><span class="toc-num">11</span><span class="toc-name">The Strategic Goal</span></a>
+    </div>
+</div>
+
+<!-- 01 -->
+<div class="section" id="s01">
+    <div class="section-header">
+        <div class="section-number">01</div>
+        <div><h2 class="section-title">The Positioning Shift</h2></div>
+    </div>
+    <div class="belief">
+        <p>The highest-status positioning is not "exclusive," "elite," or "for smart people."<br>It is: "For people willing to approach investing as a serious lifelong craft."</p>
+    </div>
+    <p class="body-text">Claiming superiority is easy to imitate and eventually feels performative. True status comes from association with difficult, respected, long-horizon mastery pursuits — not loud signaling.</p>
+    
+    <p class="sub-label">What Not To Do</p>
+    <ul class="rule-list">
+        <li>Exclusive / invitation-only positioning</li>
+        <li>"Elite investors only" language</li>
+        <li>"Luxury finance" framing</li>
+        <li>"Smart people use this" messaging</li>
+        <li>Status through claimed superiority</li>
+    </ul>
+
+    <p class="sub-label">Why True Status Persists</p>
+    <p class="body-text">Elite universities, special forces, Formula 1, Berkshire Hathaway, and endurance sports maintain durable status because of:</p>
+    <ul class="rule-list">
+        <li>Difficulty of entry and mastery</li>
+        <li>Restraint in communication</li>
+        <li>Rarity of achievement</li>
+        <li>Delayed, earned validation</li>
+        <li>Long-term compounding results</li>
+    </ul>
+
+    <p class="body-text">The distinction is critical: ego signals inferiority. Discipline signals competence.</p>
+</div>
+
+<!-- 02 -->
+<div class="section" id="s02">
+    <div class="section-header">
+        <div class="section-number">02</div>
+        <div><h2 class="section-title">Status Through Discipline</h2><div class="section-subtitle">The correct status hierarchy.</div></div>
+    </div>
+
+    <div class="status-hierarchy">
+        <div class="hierarchy-section">
+            <div class="hierarchy-label">❌ What Creates False Status</div>
+            <ul class="hierarchy-items">
+                <li>Wealth → Status</li>
+                <li>Activity → Status</li>
+                <li>Confidence → Status</li>
+                <li>Certainty → Status</li>
+                <li>Prediction ability → Status</li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>A decision system<br>for how serious<br><em>marketing</em><br>actually works.</h1>
-        <p>We believe behavior follows identity, not instruction. Marketing doesn't persuade — it increases desirability. It doesn't reassure — it filters for the right person.</p>
-        <a href="#core" class="cta-button">Read The Framework</a>
-    </section>
-
-    <!-- CORE BELIEF -->
-    <section id="core">
-        <h2>The Core Belief</h2>
-        <div class="section-intro">
-            <p><span class="highlight-text">People rarely outperform their self-image.</span> Behavior follows identity, not instruction.</p>
         </div>
-        <p>Our marketing shapes identity through truth and standards. We are not telling people what to do. We are helping them become the kind of person who behaves differently.</p>
-        
-        <div class="belief-box">
-            <h3>Four Non-Negotiables</h3>
-            <ul class="principle-list">
-                <li>Marketing does not persuade — Marketing increases desirability</li>
-                <li>Marketing does not reassure — Marketing filters for the right person</li>
-                <li>We do not chase engagement — We post when it deserves to be posted</li>
-                <li>We do not react to news — We remain calm under pressure</li>
+
+        <div class="hierarchy-section">
+            <div class="hierarchy-label">✓ What Creates True Status</div>
+            <ul class="hierarchy-items">
+                <li>Composure → Status</li>
+                <li>Discipline → Status</li>
+                <li>Restraint → Status</li>
+                <li>Intellectual honesty → Status</li>
+                <li>Long-term consistency → Status</li>
+                <li>Emotional control → Status</li>
+                <li>Process orientation → Status</li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- POSITIONING -->
-    <section id="positioning" class="light-bg">
-        <h2>Positioning</h2>
-        <div class="section-intro">
-            <p>Our account must communicate one thing clearly: <span class="highlight-text">most marketing is being trained to fail. This is the alternative.</span></p>
-        </div>
-        
-        <div class="positioning-grid">
-            <div class="pos-card">
-                <h3>Old Approach</h3>
-                <div class="old-new">
-                    <div class="old-way">
-                        <strong>Inspiration</strong>
-                        <strong>Education</strong>
-                        <strong>Motivation</strong>
-                    </div>
-                    <div class="new-way">
-                        <strong>New Approach</strong>
-                        <strong>Diagnosis</strong>
-                        <strong>Correction</strong>
-                        <strong>Discipline</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="pos-card">
-                <h3>The Shift</h3>
-                <p><span class="meta-text">From friendly fintech to institutional calm.</span></p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;"><strong>"We help you market better"</strong> → <strong>"This is not built for everyone."</strong></p>
-            </div>
-            <div class="pos-card">
-                <h3>The ICP</h3>
-                <p>Serious founder. Long-term oriented. Intellectually honest. Frustrated with platforms that feel like content casinos. Aspires to excellence. Comfortable with friction and high standards.</p>
-            </div>
-        </div>
-    </section>
+    <p class="body-text">The highest-status investor is: the calmest, most disciplined, least reactive, most intellectually honest, and most process-oriented. This is radically different from mainstream finance culture.</p>
 
-    <!-- THE ENEMY -->
-    <section>
-        <h2>The Enemy</h2>
-        <div class="section-intro">
-            <p>An industry optimised for engagement, not outcomes.</p>
-        </div>
-        
-        <div class="positioning-grid">
-            <div class="pos-card">
-                <h3>Social Platforms</h3>
-                <p>Optimised for engagement — hot takes beat patient thinking.</p>
-            </div>
-            <div class="pos-card">
-                <h3>Marketing Agencies</h3>
-                <p>Optimised for activity — more campaigns = more revenue, regardless of results.</p>
-            </div>
-            <div class="pos-card">
-                <h3>Growth Tactics</h3>
-                <p>Optimised for attention — viral beats honest, urgency beats truth.</p>
-            </div>
-        </div>
-        
-        <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--grey-50); font-style: italic;">We do not attack competitors by name. We attack the system that produces bad marketers at scale.</p>
-    </section>
+    <div class="belief">
+        <p>The key strategic move: make humility itself feel high-status.</p>
+    </div>
 
-    <!-- CONTENT ARCHITECTURE -->
-    <section id="content">
-        <h2>Content Architecture</h2>
-        <div class="section-intro">
-            <p>Four post types. One integrated system.</p>
-        </div>
-        
-        <div class="post-types-grid">
-            <div class="post-type">
-                <div class="type-label"><strong>D</strong> — Doctrine</div>
-                <h3>Establish belief</h3>
-                <p>Pure black. Type-only. Declarative statements the right person finishes themselves. No explanation — just declaration.</p>
-                <ul class="examples">
-                    <li>Activity feels like intelligence. It isn't.</li>
-                    <li>You don't need more ideas. You need fewer mistakes.</li>
-                    <li>Patience is a strategy.</li>
-                    <li>Restraint compounds.</li>
+    <p class="body-text">Most finance brands reward certainty, confidence, prediction, aggressiveness. Intelligent Investing should reward patience, uncertainty tolerance, probabilistic thinking, reflection, and discipline. This is the actual cultural inversion.</p>
+</div>
+
+<!-- 03 -->
+<div class="section" id="s03">
+    <div class="section-header">
+        <div class="section-number">03</div>
+        <div><h2 class="section-title">The Emotional Frame</h2></div>
+    </div>
+
+    <div class="belief">
+        <p>Most people want excitement. Very few are willing to pursue mastery.<br>That's extremely powerful psychologically.</p>
+    </div>
+
+    <p class="body-text">Ambitious people — founders, operators, engineers, athletes, intellectually competitive people — want difficult games, meaningful standards, and earned respect. The challenge itself becomes aspirational.</p>
+
+    <p class="sub-label">The Emotional Goal</p>
+    <p class="body-text">Every piece of content should make the audience feel:</p>
+
+    <div class="belief">
+        <p>"This platform is making me smarter, calmer, more disciplined, and more capable."</p>
+    </div>
+
+    <p class="body-text">Not "This platform is entertaining me."</p>
+
+    <p class="sub-label">The Direction</p>
+    <ul class="rule-list">
+        <li>Seriousness over entertainment</li>
+        <li>Ambition over stimulation</li>
+        <li>Composure over excitement</li>
+        <li>Intelligence over hype</li>
+        <li>Control over chaos</li>
+        <li>Restraint over excess</li>
+        <li>Sophistication over simplicity</li>
+        <li>Mastery over speed</li>
+        <li>Earned confidence over false certainty</li>
+    </ul>
+</div>
+
+<!-- 04 -->
+<div class="section" id="s04">
+    <div class="section-header">
+        <div class="section-number">04</div>
+        <div><h2 class="section-title">The Market Opportunity</h2></div>
+    </div>
+
+    <div class="compare-table">
+        <h4>The Category Gap</h4>
+        <div class="compare-cols">
+            <div class="compare-col">
+                <h5>Category 1: Casino Finance</h5>
+                <p style="font-size: 0.75rem; color: var(--grey-50); margin-bottom: 0.75rem;">Examples: Robinhood, meme trading, gambling disguised as investing</p>
+                <ul>
+                    <li>Excitement</li>
+                    <li>Impulsivity</li>
+                    <li>Social validation</li>
+                    <li>Stimulation</li>
+                    <li>Speed</li>
                 </ul>
             </div>
-            
-            <div class="post-type">
-                <div class="type-label"><strong>R</strong> — Reality</div>
-                <h3>Prove the promise</h3>
-                <p>Show your system working. Numbers are the hero. Demonstrate rigor through data.</p>
-                <ul class="examples">
-                    <li>20.00 / month — Not a price. A filter.</li>
-                    <li>Decision log with regret column</li>
-                    <li>Twelve months. No engagement tricks.</li>
-                    <li>Cost of avoidable mistakes: itemized</li>
-                </ul>
-            </div>
-            
-            <div class="post-type">
-                <div class="type-label"><strong>E</strong> — Experimental</div>
-                <h3>Earn attention without breaking voice</h3>
-                <p>Seven graphic devices that break format without breaking character. These are the posts people screenshot.</p>
-                <ul class="examples">
-                    <li>20-year performance reduced to two dots</li>
-                    <li>Popular advice page — all redacted except "do nothing"</li>
-                    <li>100 reasons to act — 99 struck through</li>
-                    <li>Your costs. Your mistakes. Itemized.</li>
-                </ul>
-            </div>
-            
-            <div class="post-type">
-                <div class="type-label"><strong>C</strong> — Carousels</div>
-                <h3>Drive saves and depth</h3>
-                <p>3 carousels, 14 slides total. Carousels earn 2–3× saves on strategy accounts.</p>
-                <ul class="examples">
-                    <li>When nothing is working — 5 slides</li>
-                    <li>How to wait — 5 slides</li>
-                    <li>The three costs — 4 slides</li>
+            <div class="compare-col">
+                <h5>Category 2: Lifeless Institutional</h5>
+                <p style="font-size: 0.75rem; color: var(--grey-50); margin-bottom: 0.75rem;">Examples: Legacy banks, wealth management, traditional brokerages</p>
+                <ul>
+                    <li>Sterile</li>
+                    <li>Generic</li>
+                    <li>Corporate</li>
+                    <li>Emotionally empty</li>
+                    <li>Low identity value</li>
                 </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- TONE & VOICE -->
-    <section id="voice" class="light-bg">
-        <h2>Tone & Voice</h2>
-        <div class="section-intro">
-            <p>A shift from friendly to certain. From educational to unapologetic.</p>
-        </div>
-        
-        <div class="voice-comparison">
-            <div class="comparison-item">
-                <div class="old">Friendly</div>
-                <div class="arrow">→</div>
-                <div class="new">Calm</div>
-            </div>
-            <div class="comparison-item">
-                <div class="old">Motivational</div>
-                <div class="arrow">→</div>
-                <div class="new">Certain</div>
-            </div>
-            <div class="comparison-item">
-                <div class="old">Educational</div>
-                <div class="arrow">→</div>
-                <div class="new">Unapologetic</div>
-            </div>
-            <div class="comparison-item">
-                <div class="old">"We help you market better"</div>
-                <div class="arrow">→</div>
-                <div class="new">"This is not built for everyone"</div>
-            </div>
-        </div>
+    <div class="belief">
+        <p>There is almost nobody occupying: high-status cinematic seriousness.<br>That is the opening.</p>
+    </div>
 
-        <div class="karp-format">
-            <h3>The Three-Part Formula</h3>
-            <div class="formula-step">
-                <div class="step-num">01</div>
-                <div>
-                    <strong>Hard claim</strong>
-                    <p>Clear, uncomfortable, non-consensus. One to three lines. No hedging.</p>
-                </div>
-            </div>
-            <div class="formula-step">
-                <div class="step-num">02</div>
-                <div>
-                    <strong>System explanation</strong>
-                    <p>Why the world produces this outcome. Two sentences maximum.</p>
-                </div>
-            </div>
-            <div class="formula-step">
-                <div class="step-num">03</div>
-                <div>
-                    <strong>Correction</strong>
-                    <p>What serious marketers do instead. Never a call-to-action.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <p class="body-text">The market is polarized. One extreme is casino finance. The other is institutional sterility. The unoccupied territory is where discipline, intelligence, and aspiration converge.</p>
+</div>
 
-    <!-- WHAT WE NEVER DO -->
-    <section>
-        <h2>What We Never Do</h2>
-        <div class="section-intro">
-            <p>This list overrides cleverness. If something works but appears here, we reject it.</p>
-        </div>
-        
-        <div class="blacklist-grid">
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>React to trends or news</strong>
-                    <p>We operate on a different time horizon</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Use urgency language</strong>
-                    <p>"Now", "don't miss", "act today" — never</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Chase engagement metrics</strong>
-                    <p>No comment baiting, no poll CTAs, no retweets</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Partner with influencers</strong>
-                    <p>Serious spreads through identity, not endorsement</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Feature comparison tables</strong>
-                    <p>We compete on philosophy, not features</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Simplify uncomfortable truths</strong>
-                    <p>We state reality calmly. We do not soften it.</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Optimize for vanity metrics</strong>
-                    <p>Optics are not outcomes</p>
-                </div>
-            </div>
-            <div class="blacklist-item">
-                <div class="bl-marker">×</div>
-                <div>
-                    <strong>Add tactics for engagement</strong>
-                    <p>The philosophy must not contradict the tactic</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 05 -->
+<div class="section" id="s05">
+    <div class="section-header">
+        <div class="section-number">05</div>
+        <div><h2 class="section-title">Brand Archetypes</h2></div>
+    </div>
 
-    <!-- THE REVIEW RITUAL -->
-    <section class="light-bg">
-        <h2>The Review Ritual</h2>
-        <div class="section-intro">
-            <p>Before anything ships, the owner must answer the following. If answers feel hand-wavy, it is not ready.</p>
+    <div class="archetype-grid">
+        <div class="archetype-col">
+            <h4>Be More Like</h4>
+            <ul>
+                <li>Anduril</li>
+                <li>Palantir</li>
+                <li>Porsche</li>
+                <li>Formula 1 telemetry</li>
+                <li>Bloomberg terminals</li>
+                <li>Hermès</li>
+                <li>The Row</li>
+                <li>Elite military systems</li>
+                <li>Operator infrastructure</li>
+                <li>High-end industrial design</li>
+            </ul>
         </div>
-        
-        <ol class="ritual-list">
-            <li>What belief does this reinforce?</li>
-            <li>What behavior does this encourage?</li>
-            <li>Who does this intentionally filter out?</li>
-            <li>What temptation did we resist by shipping this?</li>
-            <li>Would this still exist if metrics disappeared?</li>
-        </ol>
-    </section>
+        <div class="archetype-col">
+            <h4>Be Nothing Like</h4>
+            <ul>
+                <li>Finance influencers</li>
+                <li>Social trading apps</li>
+                <li>Meme investing culture</li>
+                <li>"Stocks are fun" branding</li>
+                <li>Hyper-consumer fintech</li>
+                <li>Trading gamification</li>
+                <li>Dopamine-driven design</li>
+                <li>Hype marketing</li>
+                <li>Get-rich-quick energy</li>
+                <li>Cheap sophistication</li>
+            </ul>
+        </div>
+    </div>
 
-    <!-- METRICS -->
-    <section>
-        <h2>Metrics That Matter</h2>
-        <div class="section-intro">
-            <p>What to track, and what to ignore.</p>
-        </div>
-        
-        <div class="metrics-grid">
-            <div class="metric-comparison">
-                <div class="metric-old">
-                    <h3>Discard These</h3>
-                    <ul>
-                        <li>Impressions</li>
-                        <li>Engagement rates</li>
-                        <li>Follower counts</li>
-                        <li>Click-through rates</li>
-                        <li>Viral posts</li>
-                        <li>Short-term conversions</li>
-                    </ul>
-                </div>
-                <div class="metric-new">
-                    <h3>Track These</h3>
-                    <ul>
-                        <li>Organic referrals (quality over volume)</li>
-                        <li>Behavior change in audience</li>
-                        <li>Long-term retention</li>
-                        <li>Thoughtful questions in comments</li>
-                        <li>People who quote your language</li>
-                        <li>New audience acquisition cost</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <p class="body-text">Not cold. Not clinical. Deliberate, restrained, intelligent, high-agency, precise, confident. The visual and cultural system should feel like an operating system for serious investors — not an app for retail traders.</p>
+</div>
 
-        <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--grey-30); border-top: var(--rule); padding-top: 2rem;">Cult growth is slow — until it isn't. Look for quiet referrals, thoughtful engagement, and long-term retention. The strongest sign this is working: people quote your language back to you.</p>
-    </section>
+<!-- 06 -->
+<div class="section" id="s06">
+    <div class="section-header">
+        <div class="section-number">06</div>
+        <div><h2 class="section-title">Messaging Strategy</h2></div>
+    </div>
 
-    <!-- THE OATH -->
-    <section class="oath-section">
-        <h2 style="margin-bottom: 3rem;">The Oath</h2>
-        <div class="oath-content">
-            <div class="oath-negative">
-                <p><strong>We will not build for attention.</strong></p>
-                <p><strong>We will not build for hype.</strong></p>
-                <p><strong>We will not build for consensus.</strong></p>
-            </div>
-            <div class="oath-positive">
-                <p><strong>We will build for truth.</strong></p>
-                <p><strong>We will build for discipline.</strong></p>
-                <p><strong>We will build for the long term.</strong></p>
-            </div>
-            <div class="oath-closing">
-                <p>If we do this consistently,<br>the right people will find us.<br>And they will stay.</p>
-            </div>
+    <div class="messaging-block">
+        <h4>Current Approach (Wrong)</h4>
+        <div class="messaging-avoid">
+            <h5>❌ Avoid</h5>
+            <ul class="messaging-list">
+                <li>"Join elite investors"</li>
+                <li>"Invest like the pros"</li>
+                <li>"AI-powered alpha"</li>
+                <li>"Smarter trading"</li>
+                <li>"Get rich faster"</li>
+                <li>"Beat the market"</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- FINAL MESSAGE -->
-    <section class="final-section">
-        <div class="final-statement">
-            Long-term thinking.<br><em>Modern marketing.</em>
+    <div class="messaging-block">
+        <h4>Proposed Messaging (Right)</h4>
+        <div class="messaging-prefer">
+            <h5>✓ Use Instead</h5>
+            <ul class="messaging-list">
+                <li>"Outperforming the market is extraordinarily difficult"</li>
+                <li>"The market punishes overconfidence"</li>
+                <li>"Patience is rare"</li>
+                <li>"Most investors interrupt compounding"</li>
+                <li>"The challenge is the point"</li>
+                <li>"Mastery takes decades"</li>
+                <li>"The intelligent investor respects uncertainty"</li>
+                <li>"Serious investing requires humility"</li>
+                <li>"Very few people are willing to do this honestly for decades"</li>
+                <li>"Almost nobody is willing to approach this as a lifelong craft"</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Let's Talk</h2>
-        <div class="section-intro">
-            <p>Questions about this framework, or ready to work together? Send a message.</p>
-        </div>
-        
-        <form class="contact-form" id="contactForm">
-            <div id="formMessage"></div>
+    <p class="body-text">This messaging elevates the challenge, creates aspiration, creates seriousness, and avoids fake sophistication. The strongest positioning makes users feel they are participating in something difficult, respected, and meaningful — not that they are better than other people.</p>
+</div>
+
+<!-- 07 -->
+<div class="section" id="s07">
+    <div class="section-header">
+        <div class="section-number">07</div>
+        <div><h2 class="section-title">Cultural Content Doctrine</h2><div class="section-subtitle">Building the Anduril of consumer investing.</div></div>
+    </div>
+
+    <div class="belief">
+        <p>The best modern companies are not merely products.<br>They are identities, philosophies, aesthetic systems, operating systems, cultural artifacts, visions of the future.</p>
+    </div>
+
+    <p class="body-text">The goal is not to make investing "fun." The goal is to make disciplined investing feel intelligent, aspirational, serious, and culturally powerful. The product is not merely the portfolio. The product is the evolution of the investor.</p>
+
+    <p class="sub-label">The Core Strategic Thesis</p>
+    <ul class="rule-list">
+        <li>Robinhood made speculation culturally aspirational</li>
+        <li>Intelligent Investing should make discipline culturally aspirational</li>
+        <li>We are not trying to attract gamblers</li>
+        <li>We are trying to attract aspiring intelligent investors</li>
+        <li>Serious operators, ambitious long-term thinkers</li>
+        <li>People who want to become better versions of themselves</li>
+    </ul>
+
+    <div class="belief">
+        <p>The investor identity is the product. The app is the operating environment for that identity.</p>
+    </div>
+
+    <p class="body-text">Over time, users should increasingly feel: "The smartest investors use Intelligent Investing." Not because the platform says so. Because the entire system looks different, sounds different, behaves differently, rewards different behaviors, attracts different people, and creates different outcomes.</p>
+</div>
+
+<!-- 08 -->
+<div class="section" id="s08">
+    <div class="section-header">
+        <div class="section-number">08</div>
+        <div><h2 class="section-title">The Anduril Model</h2></div>
+    </div>
+
+    <p class="body-text">Anduril does not market itself like a defense contractor. It markets itself like a civilization-scale technology company, a mission-oriented operating system, the future arriving early. Its launch videos feel cinematic. Its product reveals feel inevitable. Its culture feels elite. Its positioning makes people feel like they are participating in something important.</p>
+
+    <p class="sub-label">The Pattern to Adopt</p>
+    <ul class="rule-list">
+        <li>Cinematic product presentation</li>
+        <li>Inevitable-feeling reveals</li>
+        <li>Elite cultural positioning</li>
+        <li>Mission-oriented framing</li>
+        <li>Future-oriented narrative</li>
+        <li>Quiet confidence in execution</li>
+        <li>System-level thinking</li>
+        <li>Long-term vision</li>
+        <li>Operator-focused language</li>
+    </ul>
+
+    <p class="body-text">Intelligent Investing should adopt the same strategy: constantly tease future systems, hint at upcoming intelligence layers, reference advanced portfolio infrastructure — not over-explained, not marketed aggressively, just enough to create the feeling that something much bigger is being built.</p>
+</div>
+
+<!-- 09 -->
+<div class="section" id="s09">
+    <div class="section-header">
+        <div class="section-number">09</div>
+        <div><h2 class="section-title">Two-Layer Strategy</h2><div class="section-subtitle">Balance credibility with aspiration.</div></div>
+    </div>
+
+    <div class="layer-structure">
+        <div class="layer">
+            <div class="layer-title">Layer 1: The System That Exists Today</div>
+            <p style="font-size: 0.85rem; color: var(--grey-30); margin-bottom: 1rem;">This content must clearly communicate the current product and capabilities.</p>
             
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            
-            <button type="submit" class="form-submit">Send</button>
-        </form>
-    </section>
+            <div class="layer-subtitle">Communicate</div>
+            <ul>
+                <li>The current product</li>
+                <li>The current capabilities</li>
+                <li>The current philosophy</li>
+                <li>The current behavioral systems</li>
+                <li>The current investing infrastructure</li>
+            </ul>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>// MARKETING IDEAS</p>
-        <p>A decision system for serious marketing — May 2026</p>
-        <p>Long-term thinking. Modern strategy.</p>
-    </footer>
+            <div class="layer-subtitle">Show</div>
+            <ul>
+                <li>Disciplined portfolio construction</li>
+                <li>S&P core strategy</li>
+                <li>Behavioral calibration systems</li>
+                <li>Long-term investing philosophy</li>
+                <li>Performance benchmarking</li>
+                <li>Thoughtful buy flows</li>
+                <li>Reduced noise environments</li>
+                <li>Research infrastructure</li>
+                <li>Generational wealth frameworks</li>
+            </ul>
 
-    <script src="script.js"></script>
+            <div class="layer-subtitle">Goal</div>
+            <p style="font-size: 0.8rem; color: var(--grey-30);">The audience should feel: "This already feels fundamentally different from every other investing platform."</p>
+            <p style="font-size: 0.75rem; color: var(--grey-50); margin-top: 0.5rem; font-style: italic;">Credibility compounds. The future vision only works if users believe the present system is already intelligent and differentiated.</p>
+        </div>
+
+        <div class="layer">
+            <div class="layer-title">Layer 2: The Future System</div>
+            <p style="font-size: 0.85rem; color: var(--grey-30); margin-bottom: 1rem;">At the same time, content should subtly signal future capabilities.</p>
+            
+            <div class="layer-subtitle">Signal (Not Overpromise)</div>
+            <ul>
+                <li>Future intelligence systems</li>
+                <li>Future AI infrastructure</li>
+                <li>Future behavioral tooling</li>
+                <li>Future portfolio operating systems</li>
+                <li>Future agentic workflows</li>
+                <li>Future allocation intelligence</li>
+                <li>Future ontology layers</li>
+                <li>Future decision-support systems</li>
+            </ul>
+
+            <div class="layer-subtitle">Tone</div>
+            <p style="font-size: 0.8rem; color: var(--grey-30);">Should feel inevitable, thoughtful, grounded, operator-oriented, quietly ambitious. Not hype. Not science fiction.</p>
+
+            <div class="layer-subtitle">Goal</div>
+            <p style="font-size: 0.8rem; color: var(--grey-30);">"A serious long-term system is unfolding."</p>
+            <p style="font-size: 0.75rem; color: var(--grey-50); margin-top: 0.5rem; font-style: italic;">Not "Look at this crazy future idea." But "There is something much bigger being built here."</p>
+        </div>
+    </div>
+</div>
+
+<!-- 10 -->
+<div class="section" id="s10">
+    <div class="section-header">
+        <div class="section-number">10</div>
+        <div><h2 class="section-title">Tone & Visual Direction</h2></div>
+    </div>
+
+    <p class="sub-label">The Tone</p>
+    <p class="body-text">The brand should whisper, not shout. Avoid exaggerated claims, hyperactive copy, motivational clichés, "get rich quick" energy, fake empowerment, shallow language. Prefer understatement, precision, conviction, restraint, depth, calm confidence.</p>
+    <p class="body-text">The audience should feel intelligence, not manipulation.</p>
+
+    <p class="sub-label">Visual Direction</p>
+    <p class="body-text">The visual system should feel: minimal, cinematic, industrial, timeless, high-end, restrained, intelligent.</p>
+
+    <div class="compare-table">
+        <h4>Visual Inspirations</h4>
+        <div class="compare-cols">
+            <div class="compare-col">
+                <h5>Reference</h5>
+                <ul>
+                    <li>Anduril product films</li>
+                    <li>Palantir demos</li>
+                    <li>Porsche launch visuals</li>
+                    <li>Formula 1 telemetry</li>
+                    <li>Luxury editorial</li>
+                    <li>Military interfaces</li>
+                    <li>Modern architecture</li>
+                    <li>Brutalist restraint</li>
+                </ul>
+            </div>
+            <div class="compare-col">
+                <h5>Avoid</h5>
+                <ul>
+                    <li>Cartoon finance aesthetics</li>
+                    <li>Bright dopamine palettes</li>
+                    <li>Excessive emojis</li>
+                    <li>Clutter</li>
+                    <li>Gamification visuals</li>
+                    <li>Meme energy</li>
+                    <li>Consumer fintech cuteness</li>
+                    <li>Trading app clichés</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 11 -->
+<div class="section" id="s11">
+    <div class="section-header">
+        <div class="section-number">11</div>
+        <div><h2 class="section-title">The Strategic Goal</h2></div>
+    </div>
+
+    <div class="belief">
+        <p>We are not building another finance app.<br>We are building the cultural and operational infrastructure for the next generation of serious investors.</p>
+    </div>
+
+    <p class="body-text">The long-term objective is to make Intelligent Investing synonymous with intelligent capital allocation, behavioral edge, disciplined investing, sophisticated retail investing, long-term performance, thoughtful wealth creation.</p>
+
+    <p class="sub-label">The Two-Part Mission</p>
+    <ul class="rule-list">
+        <li>Part 1: Transform investing from entertainment to mastery pursuit</li>
+        <li>Part 2: Make discipline and composure culturally aspirational</li>
+    </ul>
+
+    <p class="body-text">Not through claiming superiority. Through creating a system that looks different, sounds different, behaves differently, rewards different behaviors, attracts different people, and creates different outcomes.</p>
+
+    <div class="belief">
+        <p>If we do this consistently,<br>the right people will find us.<br>And they will stay.</p>
+    </div>
+</div>
+
+<!-- OATH -->
+<div class="oath">
+    <div class="section-label">The Oath</div>
+    <div class="oath-text">
+        <strong>We will not build for attention.</strong><br>
+        <strong>We will not build for hype.</strong><br>
+        <strong>We will not build for ego.</strong>
+        <span class="oath-spacer"></span>
+        <strong>We will build for truth.</strong><br>
+        <strong>We will build for discipline.</strong><br>
+        <strong>We will build for mastery.</strong>
+        <span class="oath-spacer"></span>
+        We will make the hardest path<br>feel like the only intelligent path.<br>
+        And the right investors will find us.
+    </div>
+</div>
+
+<!-- FINAL -->
+<div class="final">
+    <div class="final-text">The operating system<br>for serious long-term<br><em>capital allocation.</em></div>
+</div>
+
+<footer>
+    <span>// INTELLIGENTINVESTING.AI</span>
+    <span>Strategic Marketing Doctrine Vol. 02 — May 2026</span>
+    <span>Internal — Not for Distribution</span>
+</footer>
+
 </body>
 </html>
